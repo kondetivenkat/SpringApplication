@@ -19,6 +19,7 @@ const Product = () => {
           `http://localhost:8081/api/product/${id}`
         );
         setProduct(response.data);
+        console.log(response.data.quantity);
         if (response.data.imageName) {
           fetchImage();
         }
@@ -105,7 +106,7 @@ const Product = () => {
               <i> {new Date(product.releasedate).toLocaleDateString()}</i>
             </p>
           </div>
-          {/* <div className="update-button ">
+           <div className="update-button ">
             <button
               className="btn btn-primary"
               type="button"
@@ -121,7 +122,7 @@ const Product = () => {
             >
               Delete
             </button>
-          </div> */}
+          </div> 
         </div>
       </div>
     </>
